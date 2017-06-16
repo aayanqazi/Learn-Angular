@@ -8,13 +8,14 @@ import { ActivatedRoute } from "@angular/router";
 export class DirectoryComponent implements OnInit {
   ninja: string;
   classess: object;
+  arrayNinja:string[];
+  term = 'Tour of Heroes';
   constructor(private route: ActivatedRoute) {
     this.ninja = route.snapshot.params['id'];
     console.log("Ninja World ", this.ninja)
     this.classess = {'blue':true,'underline':false,'red':false};
-
+    this.arrayNinja = ["arsalan","sabir","ahmed","arbaz","notfound"];
   }
-
   red() {
     this.classess = {'blue':false,'underline':false,'red':true};
   }
